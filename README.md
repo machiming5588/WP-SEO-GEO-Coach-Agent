@@ -1,4 +1,5 @@
 # WP-SEO-GEO-Coach-Agent
+
 A WordPress independent site audit and "white-hat" SEO coaching service—acting as a technical supervisor for foreign trade business owners and a hands-on, guided mentor for novice operators.
 
 **给外贸老板当「技术监理」、给零基础运营当「带锁教练」的 WordPress 独立站体检与白帽 SEO 陪跑 MCP 引擎。**
@@ -18,12 +19,10 @@ A WordPress independent site audit and "white-hat" SEO coaching service—acting
 > 本仓库核心引擎 `wp_seo_coach.py`、测试套件与 `SKILL.md` 协议 **100% 开源免费**，懂技术的团队直接拉取即可投入生产。
 >
 > 如果你是外贸企业老板/高管，不想花半天折腾 Windows 环境和提示词，欢迎获取配套整理好的**《零基础员工 3 分钟开跑懒人包》**（含排版好的 WPS/PDF 操作手册、Windows 避坑清单、璇玑/Cursor 3 套老站起手式提示词与万能推进话术）：
-> - **方式 1（抖音互动领取）**：关注抖音号 **`【马厂长的外贸笔记】`**，三连对应视频后评论区回复 **`体检`** ， 此外在这里推荐一下我个人用了半年的国人完成的智能体，名字叫【璇玑】，如果你也不希望被别人卡脖子，可以用用看，不会让大家吃亏的。扫描二维码注册👉<img width="250" height="250" alt="f9d1cabb6bfbdbfb1b1952c57fc3f86f" src="https://github.com/user-attachments/assets/48f39e8f-3734-4cd6-991c-7137287a457f" />
-
-> - **方式 2（自愿打赏支持）**：如果这个工具帮你避开了几万块的外包大坑，欢迎扫码请喝杯咖啡，打赏备注邮箱可顺手获赠最新懒人包更新通知：
+> - **抖音互动领取**：关注抖音号 **马厂长的外贸笔记**，三连对应视频后评论区回复 **`体检`** 即可领取。
+> - **配套客户端推荐**：这里顺便推荐一下我个人用了半年的国人自研智能体 **【璇玑】**，如果你也不希望被海外工具卡脖子，可以直接扫码注册配合本引擎使用：
 >
-> <!-- 提示：在 GitHub 网页编辑 README 时，直接把你的打赏二维码图片拖进编辑框即可自动生成图片链接替换下面这行 -->
-> > <img width="220" alt="自愿打赏支持" src="https://github.com/user-attachments/assets/7fa4e373-27ff-416c-9261-ed9ecaf46aad" />
+> <img width="220" alt="璇玑智能体注册二维码" src="https://github.com/user-attachments/assets/48f39e8f-3734-4cd6-991c-7137287a457f" />
 
 ---
 
@@ -72,3 +71,92 @@ A WordPress independent site audit and "white-hat" SEO coaching service—acting
 
 ```bash
 pip install "mcp<2" pydantic httpx beautifulsoup4 dnspython cryptography paramiko filelock
+```
+
+*(国内网络如安装缓慢，可在 `install` 后追加 `-i https://pypi.tuna.tsinghua.edu.cn/simple`)*
+
+### 2. 先跑 1 秒本地自测（验证环境无误）
+```bash
+python test_wp_seo_coach.py -v
+```
+看到输出 `Ran 8 tests ... OK` 即表示本地加密库、体检拦截器、18 节点状态机与 10 路并发锁全部就绪。
+
+---
+
+### 3. 零门槛体验：1 条命令给任意网站免费体检（无需 VPS / 无需密码）
+```bash
+python wp_seo_coach.py audit [https://你的域名.com](https://你的域名.com) --model b2b_export
+```
+
+**体检项全覆盖**：HTTPS 强制跳转与死循环检测 / Cloudflare 等 CDN 隐藏源站检测 / 邮局端口与 MX·SPF·DKIM·DMARC 解耦检测 / 唯一 H1 核验 / AI Base64·SVG 膨胀扫描 / JSON-LD Schema 真实性与防造假检测 / `robots.txt` 与 XML Sitemap / 合规条款页检测。
+
+---
+
+### 4. 三种已有老站直通起手式（免 VPS / 免 SSH）
+如果你已经有现成的 WordPress 独立站，直接用 `init-existing` 命令把域名录入本地加密 Vault（WordPress 应用密码、Serper/Hunter API 均可直接回车跳过，零额外 API 费用即可配合 Agent 自带搜索跑通）：
+
+```bash
+# 模式 1（推荐）：跳过前 8 关建站基建，直接从 Stage 3 站内 SEO 体检切入
+python wp_seo_coach.py vault init-existing --alias my_site --stage stage_03_onpage
+
+# 模式 2：站内技术底子已 OK，直接从 Stage 4 关键词意图分流与内容工程切入
+python wp_seo_coach.py vault init-existing --alias my_site --stage stage_04_content
+
+# 模式 3：纯跑 Stage 5 外链 SERP 黑名单清洗、抓站长邮箱与导出开发信/CSV 台账
+python wp_seo_coach.py vault init-existing --alias my_site --stage stage_05_outreach
+```
+
+*(如需从零买 Linux VPS 跟着跑 Stage 1 备份还原演练与全流程建站，使用 `python wp_seo_coach.py vault init --alias my_site`)*
+
+---
+
+### 5. 接入桌面端 AI Agent（璇玑 / Cursor / Claude Code）
+
+1. **导出协议文件**：仓库已附带 `SKILL.md`（也可随时运行下面命令生成 UTF-8 版本），导入你的 Agent 作为 Skill 协议：
+   ```bash
+   python -c "import wp_seo_coach, pathlib; pathlib.Path('SKILL.md').write_text(wp_seo_coach.SKILL_MD.strip(), encoding='utf-8')"
+   ```
+2. **挂载本地 MCP（默认 `stdio` 模式）**：
+   - **Command**：填入本机 `python.exe` 绝对路径（Windows 可在命令行运行 `where python` 获取第一行）。
+   - **Args**：填入 `wp_seo_coach.py` 的纯英文无空格绝对路径（如 `F:\wp_seo_coach\wp_seo_coach.py`）。
+   - 如需远程模式，启动参数追加 `--http` 即可切换为 `streamable-http`。
+3. **在对话框发出开工指令**：
+   > “严格遵循 `wp-seo-coach-workflow` 协议，查看 `my_site` 的当前关卡，并立刻跑一次 `site_run_audit` 体检，用大白话告诉我现在最该改哪几项。”
+
+---
+
+## 四、项目目录说明与隐私提醒
+
+```text
+WP-SEO-GEO-Coach-Agent/
+├── wp_seo_coach.py          # 单文件全功能主引擎（CLI + Vault + 体检 + 执行器 + MCP 服务端）
+├── test_wp_seo_coach.py     # 8 项零外部依赖冒烟测试与 10 路并发锁压测套件
+├── SKILL.md                 # Agent 教官总纲协议（含四拍节拍与六条硬护栏）
+├── .gitignore               # 已屏蔽本地加密保险箱与工作区数据
+└── LICENSE                  # Apache-2.0 开源协议
+```
+
+> [!CAUTION]
+> **二次开发或提交代码前请务必确认**：运行后本地自动生成的 `.wp_coach_vault/`（加密主密钥与凭证）和 `.wp_coach_workspaces/`（站点状态与外链台账）**绝不可提交至公开仓库**。
+
+---
+
+## 五、关于作者与独立诊断服务
+
+- **作者**：马厂长（外贸独立站第三方技术诊断 · 只看不改 · 判断归我，执行归你）
+- **独立站主页**：[machangzhang.com](https://machangzhang.com)
+- **边界说明**：本开源工具免费交给你的内部运营或执行方在本地使用；如你的老站已经建好、有流量/产品页但询盘不动，需要第三方深度排查**站内抢词、6 通道 AI 爬虫真实穿透（ChatGPT / Perplexity / ClaudeBot）及商业页承接断点**，欢迎前往 [machangzhang.com](https://machangzhang.com) 提交站点，先给你 3 条能自己复核的真实读数。
+
+---
+
+## License
+
+本项目基于 [Apache-2.0 License](./LICENSE) 开源。允许免费学习、企业内部部署与二次开发，请保留原作者版权与归属声明；严禁将本工具用于未授权站点扫描或垃圾邮件群发。
+
+---
+
+## ☕ 自愿打赏与支持
+
+如果这套开源工具帮你避开了外包大坑或省下了团队摸索时间，欢迎自愿请喝杯咖啡支持持续迭代（打赏备注邮箱可同步接收最新懒人包与版本更新通知）：
+
+<img width="220" alt="自愿打赏支持" src="https://github.com/user-attachments/assets/7fa4e373-27ff-416c-9261-ed9ecaf46aad" />
