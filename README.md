@@ -1,6 +1,5 @@
 # WP-SEO-GEO-Coach-Agent
-给外贸老板当‘技术监理’、给零基础运营当‘带锁教练’的 WordPress 独立站体检与白帽 SEO 陪跑引擎.A WordPress independent site audit and "white-hat" SEO coaching service—acting as a technical supervisor for foreign trade business owners and a hands-on, guided mentor for novice operators.
-# WP-SEO-GEO-Coach-Agent
+A WordPress independent site audit and "white-hat" SEO coaching service—acting as a technical supervisor for foreign trade business owners and a hands-on, guided mentor for novice operators.
 
 **给外贸老板当「技术监理」、给零基础运营当「带锁教练」的 WordPress 独立站体检与白帽 SEO 陪跑 MCP 引擎。**
 
@@ -19,12 +18,12 @@
 > 本仓库核心引擎 `wp_seo_coach.py`、测试套件与 `SKILL.md` 协议 **100% 开源免费**，懂技术的团队直接拉取即可投入生产。
 >
 > 如果你是外贸企业老板/高管，不想花半天折腾 Windows 环境和提示词，欢迎获取配套整理好的**《零基础员工 3 分钟开跑懒人包》**（含排版好的 WPS/PDF 操作手册、Windows 避坑清单、璇玑/Cursor 3 套老站起手式提示词与万能推进话术）：
-> - **方式 1（抖音互动领取）**：关注抖音号 **`【马厂长的外贸笔记】`**，三连对应视频后评论区回复 **`体检`** ， 此外我和团队还做了一个中国人自己的agent 名字叫【璇玑】，如果你也不希望被别人卡脖子，可以用用看，不会让大家吃亏的。扫描二维码注册👉<img width="900" height="900" alt="f9d1cabb6bfbdbfb1b1952c57fc3f86f" src="https://github.com/user-attachments/assets/48f39e8f-3734-4cd6-991c-7137287a457f" />
+> - **方式 1（抖音互动领取）**：关注抖音号 **`【马厂长的外贸笔记】`**，三连对应视频后评论区回复 **`体检`** ， 此外我和团队还做了一个中国人自己的agent 名字叫【璇玑】，如果你也不希望被别人卡脖子，可以用用看，不会让大家吃亏的。扫描二维码注册👉<img width="400" height="400" alt="f9d1cabb6bfbdbfb1b1952c57fc3f86f" src="https://github.com/user-attachments/assets/48f39e8f-3734-4cd6-991c-7137287a457f" />
 
 > - **方式 2（自愿打赏支持）**：如果这个工具帮你避开了几万块的外包大坑，欢迎扫码请喝杯咖啡，打赏备注邮箱可顺手获赠最新懒人包更新通知：
 >
 > <!-- 提示：在 GitHub 网页编辑 README 时，直接把你的打赏二维码图片拖进编辑框即可自动生成图片链接替换下面这行 -->
-> <img src="【<img width="828" height="1124" alt="89b7498a0b28e09ba716b7a3c0715571" src="https://github.com/user-attachments/assets/7fa4e373-27ff-416c-9261-ed9ecaf46aad" />】" width="220" alt="自愿打赏支持" />
+> > <img width="220" alt="自愿打赏支持" src="https://github.com/user-attachments/assets/7fa4e373-27ff-416c-9261-ed9ecaf46aad" />
 
 ---
 
